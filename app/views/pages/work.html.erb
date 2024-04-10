@@ -1,48 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Work</title>
-    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div> 
+<div class="container"> 
   
-<header>   
+<header class="mb-4">   
 <h1>Alexander Fiodorov</h1>
-<ul>
-    <li><%= link_to "Home", home_path %></li>
-    <li><%= link_to "About", about_path %></li>
-    <li><%= link_to "Work", work_path %></li>
-    <li><%= link_to "Contact", contact_path %></li>
+<ul class="nav">
+    <li class="nav-item"><%= link_to "Home", home_path, class: "nav-link" %></li>
+    <li class="nav-item"><%= link_to "About", about_path, class: "nav-link" %></li>
+    <li class="nav-item"><%= link_to "Work", work_path, class: "nav-link" %></li>
+    <li class="nav-item"><%= link_to "Contact", contact_path, class: "nav-link" %></li>
 </ul>        
 </header>
 
 <main>
-  <h2>Portfolio</h2>
-  <div class="gallery">
-    <div class="item">
-      <%= image_tag("munch.png", alt: "Munch") %>
-      <div class="overlay">
-        <h3>Munch</h3>
-        <p>Rails-powered recipe blogging platform</p>
+  <h2>Work</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <%= image_tag("munch.png", alt: "Munch", class: "card-img-top") %>
+          <h3 class="card-title">Munch</h3>
+          <p class="card-text">Rails-powered recipe blogging platform</p>
+        </div>
       </div>
     </div>
-    <div class="item">
-      <%= image_tag("7zArchiver.png", alt: "7zArchiver") %>
-      <div class="overlay">
-        <h3>7zArchiver</h3>
-        <p>Open source GUI 7z file archiver written in Python</p>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <%= image_tag("7zArchiver.png", alt: "7zArchiver", class: "card-img-top") %>
+          <h3 class="card-title">7zArchiver</h3>
+          <p class="card-text">Open source GUI 7z file archiver written in Python</p>
+        </div>
       </div>
     </div>
   </div>
 </main>
 
-<footer>
-<p> Copyright © 2024 Alexander Fiodorov.</p>    
+<footer class="mt-4">
+<p class="text-center"> Copyright © 2024 Alexander Fiodorov.</p>    
 </footer>
 
 </div> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
